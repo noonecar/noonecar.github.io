@@ -1,36 +1,49 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 title: 帅气的标题
 email: 2118516661@qq.com
 description: >- # this means to ignore newlines until "baseurl:"
        所有章节所有考点，一点不落；你全都通透了，老头你不随便玩；真正的高手拿到题那一刻就已经结束了，还叨叨什么？秩为一，知一求二，知二求一，转圈化解，施密特根本没用；黄金重点，换上我最喜欢的绿色；20多年数学能学的多好？数学没有不会做的题是什么样的感觉，我让你感受感受真正的专业数学能把数学学的多好；什么施密特、洛必达拿到试卷就往上写好不好？你还要叨叨什么？老头你只要敢玩抽象函数，我直接上特征法，随便玩你；能等价，还玩什么洛必达？神仙也别叨叨；上了考场让监考老师最后一秒给我发试卷，别问为什么，问就是当我拿到试卷那一刻就已经结束了；这题给12分有点猛，给个5分小题刚刚好，粉色彩笔你随意奥，你等等我，你真得等等我，唉唉唉，抱歉抱歉写快了，怎么写的？这你都不知道吗？幼儿园小朋友都知道，小小千都知道了；粉色彩笔你先别动哈，秒秒钟就结束了口算啊同学们你还在叨叨什么？你不熟练你怎么拿捏老头？不专业就机会啊，粉色彩笔你先别动；没有一章一节一个知识点能跑得出去的；只要你足够的透足够的熟；一套组合拳打下去，老头拿什么和你玩？要的就是这种运筹帷幄的感觉 。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://noonecar.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: wlwl
+twitter_username: i don't have
 github_username: noonecar
 
 # Build settings
-theme: minima
+# theme: minima
+# remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-include-cache
+
+# Minimal Mistakes 配置（可选但推荐）
+minimal_mistakes_skin: "default" # 可选：air, dark, neon 等
+search: true
+toc: true
+comments:
+  provider: false # 如需评论可配置 disqus 等
+
+# 页面布局（重要）
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+  - scope:
+      path: ""
+    values:
+      layout: single
+      author_profile: true
+
+sass:
+  quiet_deps: true #隐藏来自依赖（如主题）的 Sass 警告，只显示自己的代码问题
 
 # Exclude from processing.
 # The following items will not be processed, by default.
