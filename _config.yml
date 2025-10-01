@@ -1,10 +1,5 @@
-include:
-  - _layouts
-  - _includes
-  - _sass
-  - assets
 
-title: 帅气的标题
+title: About wl
 email: 2118516661@qq.com
 description: >- # this means to ignore newlines until "baseurl:"
        所有章节所有考点，一点不落；你全都通透了，老头你不随便玩；真正的高手拿到题那一刻就已经结束了，还叨叨什么？秩为一，知一求二，知二求一，转圈化解，施密特根本没用；黄金重点，换上我最喜欢的绿色；20多年数学能学的多好？数学没有不会做的题是什么样的感觉，我让你感受感受真正的专业数学能把数学学的多好；什么施密特、洛必达拿到试卷就往上写好不好？你还要叨叨什么？老头你只要敢玩抽象函数，我直接上特征法，随便玩你；能等价，还玩什么洛必达？神仙也别叨叨；上了考场让监考老师最后一秒给我发试卷，别问为什么，问就是当我拿到试卷那一刻就已经结束了；这题给12分有点猛，给个5分小题刚刚好，粉色彩笔你随意奥，你等等我，你真得等等我，唉唉唉，抱歉抱歉写快了，怎么写的？这你都不知道吗？幼儿园小朋友都知道，小小千都知道了；粉色彩笔你先别动哈，秒秒钟就结束了口算啊同学们你还在叨叨什么？你不熟练你怎么拿捏老头？不专业就机会啊，粉色彩笔你先别动；没有一章一节一个知识点能跑得出去的；只要你足够的透足够的熟；一套组合拳打下去，老头拿什么和你玩？要的就是这种运筹帷幄的感觉 。
@@ -31,23 +26,49 @@ toc: true
 comments:
   provider: false # 如需评论可配置 disqus 等
 
-# 页面布局（重要）
+# 页面布局
 defaults:
+  # 针对首页
+  - scope:
+      path: "index.markdown"
+    values:
+      layout: home # 使用 home 布局
+      author_profile: false # 禁用侧边栏，让首页内容独占宽度
   - scope:
       path: ""
       type: "posts"
     values:
       layout: single
-      author_profile: true
+      author_profile: true # 文章页保留侧边栏
       read_time: true
       comments: false
       share: true
       related: true
-  - scope:
-      path: ""
-    values:
-      layout: single
-      author_profile: true
+  
+# 作者信息配置
+author:
+  name     : "wl" 
+  avatar   : "/assets/images/image0001.jpg"  # 头像路径
+  bio      : "一名探索者" # 简介文字
+  location : "Earth"               # 位置
+  email    : "2118516661@qq.com"  # 邮箱地址，会显示在页脚和此处
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square" # Font Awesome 图标
+      url: "mailto:2118516661@qq.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"         # Font Awesome 图标
+      url: "https://github.com/noonecar"
+    # - label: "Twitter"                # 可以添加更多链接
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/"
+    # - label: "Website"
+    #   icon: "fas fa-fw fa-link"
+    #   url: "https://your-website.com"
+
+# 启用自定义页脚
+footer:
+  custom: true # 使用 _includes/footer/custom.html 的内容
 
 sass:
   quiet_deps: true #隐藏来自依赖（如主题）的 Sass 警告，只显示自己的代码问题
