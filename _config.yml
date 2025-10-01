@@ -10,7 +10,7 @@ github_username: noonecar
 
 # Build settings
 # theme: minima
-# remote_theme: "mmistakes/minimal-mistakes"
+remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
