@@ -21,7 +21,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-include-cache
+  # - jekyll-include-cache
 
 # Minimal Mistakes 配置（可选但推荐）
 minimal_mistakes_skin: "default" # 可选：air, dark, neon 等
