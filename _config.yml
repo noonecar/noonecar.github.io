@@ -10,14 +10,14 @@ github_username: noonecar
 
 # Build settings
 # theme: minima
-remote_theme: "mmistakes/minimal-mistakes"
+# remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-include-cache
-  - jekyll-remote-theme
+  # - jekyll-remote-theme
 
 # Minimal Mistakes 配置（可选但推荐）
 minimal_mistakes_skin: "default" # 可选：air, dark, neon 等
