@@ -21,7 +21,7 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork  "{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
@@ -58,6 +58,15 @@ layout: default
         {% endif %}
         {% include page__taxonomy.html %}
         {% include page__date.html %}
+
+        <!-- 不蒜子文章阅读量 (添加到 single.html) -->
+        {% if page.layout == "single" %}
+          <div class="page__meta">
+            <i class="fas fa-fw fa-eye" aria-hidden="true"></i> <span id="busuanzi_container_page_pv">阅读量: <span id="busuanzi_value_page_pv"></span> 次</span>
+          </div>
+        {% endif %}
+        <!-- /不蒜子文章阅读量 -->
+
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}

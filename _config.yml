@@ -66,9 +66,6 @@ author:
     #   icon: "fas fa-fw fa-link"
     #   url: "https://your-website.com"
 
-# 启用自定义页脚
-footer:
-  custom: true # 使用 _includes/footer/custom.html 的内容
 
 sass:
   quiet_deps: true #隐藏来自依赖（如主题）的 Sass 警告，只显示自己的代码问题
